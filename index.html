@@ -1,28 +1,13 @@
-<!----
-<html>
-    <head>
-<link rel="stylesheet" href="style.css">
-<title>Document</title>
-    </head>
-    <body>
-        <div id="wrapper">
-
-        </div>
-        <script src="main.js"></script>
-    </body>
-</html>
--->
-
 <html>
 <head><link rel="stylesheet" href="style.css">
     <title>Dynamic HTML</title>
 </head>
     <body>
     <form>
-        <input type="text" id="photobox" value="Type here to add photo category" />
-        <input type="text" id="numberbox" value="Type number here" />
+        <input type="text" id="photobox" placeholder="Type here to add photo category" />
+        <input type="number" id="numberbox" placeholder="Type number here" />
         <input type="button" id="submitbutton" value="Submit" onclick="addBoxes()" />
-        <input type="button" id="clearbutton" value="Clear boxes" />
+        <input type="reset" id="clearbutton" value="Clear boxes" onclick="clearBoxes()" />
     </form>
         <div id="container">
 

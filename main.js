@@ -1,26 +1,23 @@
-/*
-let wrapper = document.getElementById("wrapper");
-let box = document.createElement("box");
-box.id = "box";
+const container = document.getElementById("container");
 
-let text = document.createTextNode("JS");
-box.appendChild(text);
+//container is a global variable//
 
-wrapper.appendChild(box);
-
-*/
-
-let userInput; 
+function clearBoxes() {
+    container.innerHTML = "";
+}
+//providing an  empty string will clear the boxes and set HTML to nothing//
 
 function addBoxes() {
-    let container = document.getElementById("container");
+    clearBoxes();
 
-    let newBox = document.createElement("div");
-    newBox.id="box";
-    
-    container.appendChild(newBox);
+    const userInput = document.getElementById("numberbox").value; //variable gets the value of user input
+
+    for (let i = 0; i < userInput; i++) {
+        const newBox = document.createElement("div");
+        newBox.className = "box";
+
+        container.appendChild(newBox);
+    }
 }
 
-for (let newBox = 0; newBox === userInput; newBox++) {
-    addBoxes();
-}
+//the for loop creates a new div with class name of box and appends the new box, until equals user input//
